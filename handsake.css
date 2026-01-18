@@ -1,106 +1,127 @@
-body{
-  background-color: black;
-  max-width: 550px;
-  margin: 0 auto;
-}
+body {
+            background-color: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0px 10px;
+            letter-spacing: 0.5px;
+        }
 
-p{
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-  font-size: 14px;
-}
+        /* The Main Card Container */
+        .profile-card {
+            width: 400px;
+            height: 450px;
+            border-radius: 50px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.15);
+            /* Mesh Gradient Background */
+            background: radial-gradient(at 0% 0%, #a2c2e1 0%, transparent 50%),
+                        radial-gradient(at 50% 50%, #ff9a3d 3%, transparent 70%),
+                        radial-gradient(at 100% 0%, #d1b1cb 0%, transparent 50%);
+            background-color: #cfb6cf;
+            display: flex;
+            align-items: flex-end;
+        }
 
-.main-container {
-  height: auto; /* full viewport height */
-  margin: 0 auto;
-  background-image: url('images/main.jpg');
-  background-size: cover;         /* ensures it fills the container */
-  background-position: center;    /* keeps the image centered */
-  background-repeat: no-repeat;   /* avoids tiling */
-  background-attachment: scroll;
-}
+        /* Glassmorphism Inner Content area */
+        .content-area {
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(10px);
+            width: calc(100% - 20px);
+            margin: 10px;
+            border-radius: 40px;
+            padding: 10px;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
 
+        /* Profile Image Styling */
+        .profile-img-container {
+            position: absolute;
+            top: -40px;
+            left: 30px;
+        }
 
-.glass-container {
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: 20px;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-  
-}
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
 
-.hero-header {
-  background-image: url('images/header-back.jpeg'); 
-  background-size: cover;         /* ensures it fills the container */
-  background-position: center;    /* keeps the image centered */
-  background-repeat: no-repeat;   /* avoids tiling */
-  background-attachment: fixed;   /* optional: creates parallax effect */
-  padding: 60px 20px 20px 20px;
-  position: relative;
-  overflow: hidden;
-  align-items: flex-start;
-  justify-content: flex-start;
-  display: flex;
-  flex-direction: column;
-}
+        /* Typography Customization */
+        .name-text {
+            font-weight: 600;
+            font-size: 1.8rem;
+            color: #252525;
+            margin-top: 25px;
+            margin-bottom: 0;
+        }
 
-.hero-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-}
+        .japanese-text {
+            font-size: 0.9rem;
+            color: #444;
+            margin-bottom: 15px;
+            display: block;
+        }
 
-.hero-header h1,
-.hero-header p {
-  z-index: 1;
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;;
-}
+        .bio-text {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.4;
+            margin-bottom: 25px;
+        }
 
-.recent-photos img {
-  width: 41px;
-  height: 41px;
-  object-fit: cover; 
-}
+        /* Button Styling */
+        .btn-follow {
+            height: 60px;
+            background: linear-gradient(to bottom, #646464, #252525);
+            color: white;
+            border-radius: 100px;
+            padding: 20px 30px;
+            border: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.2s;
+            text-decoration: none;
+        }
 
+        .btn-follow:active {
+            color: #ccc;
+            transform: scale(1.02);
+        }
 
-img {
-  transition: transform 0.3s ease;
-}
+        .btn-follow span {
+            font-size: 20px;
+            letter-spacing: 1px;
+        }
 
-img:hover,
-img:active {
-  transform: scale(1.05);
-}
+        .btn-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 1px solid rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #444;
+            background: transparent;
+            font-size: 1.2rem;
+            transition: background 0.2s;
+        }
 
+        .btn-icon:active {
+            background: rgba(0,0,0,0.05);
+        }
 
-.btn {
-  background: #000000;
-  font-size: 20px;
-}
+        .bi {
+            font-size: 25px;
+        }
 
-
-
-.contact-buttons-container {
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: 20px;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  margin-top: 30px;
-  box-sizing: border-box;
-
-}
