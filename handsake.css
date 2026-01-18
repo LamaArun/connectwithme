@@ -51,7 +51,7 @@ body {
             height: 100px;
             border-radius: 50%;
             object-fit: cover;
-            box-shadow: 0 10px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 10px rgba(0,0,0,0.1);
         }
 
         /* Typography Customization */
@@ -124,3 +124,4 @@ body {
         .bi {
             font-size: 25px;
         }
+
